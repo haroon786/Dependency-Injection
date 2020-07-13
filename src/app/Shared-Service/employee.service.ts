@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { EMPLOYEES } from '../employee-modal/employee-data';
 import { LoggingService } from './logging.service';
-console.log(`instance of  emmployeeservice`)
+
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
 
-  constructor(private loggservice:LoggingService) {
-   }
+  constructor(private loggservice:LoggingService)
+  {
+    console.log(`instance of  emmployee---service`)
+  }
 
   getEmployees()
   {
