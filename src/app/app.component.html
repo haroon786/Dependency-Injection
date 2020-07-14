@@ -1,3 +1,20 @@
-<a routerLink="/department">Department</a>
-<a routerLink="/authority">Authority</a><br>
-<router-outlet></router-outlet>
+App component
+<h2>from parent:::   {{servie.emoji}}</h2>
+<h2>from animal service to parent::: {{animalservice.animalname}}</h2>
+
+child component
+<app-employee>
+  <app-employees-list></app-employees-list>
+</app-employee>
+
+
+<!-- <app-root @NgModule(AppModule)
+        @Inject(EmployeeService) servie=>"🌺">
+  <#VIEW>
+    <p>Emoji from EmployeeService: {{servie.emoji}} (🌺)</p>
+    //<app-child>
+      <#VIEW>
+      </#VIEW>
+     //</app-child>
+  </#VIEW>
+</app-root> -->

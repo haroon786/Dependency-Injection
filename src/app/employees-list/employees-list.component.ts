@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EMPLOYEES } from '../employee-modal/employee-data';
 import { IEmployee } from '../employee-modal/employee-modal';
 import { EmployeeService } from '../Shared-Service/employee.service';
+import { AnimalService } from '../Shared-Service/animal/animal.service';
 
 @Component({
   selector: 'app-employees-list',
@@ -11,19 +12,19 @@ import { EmployeeService } from '../Shared-Service/employee.service';
 export class EmployeesListComponent implements OnInit {
 
   employees:IEmployee[];
-  constructor(private employeeservice:EmployeeService)
+  constructor(public employeeservice:EmployeeService,public animalservice:AnimalService)
   {
     console.log("in employee list");
   }
 
 
   ngOnInit() {
-      this.getEmployees()
+     // this.getEmployees()
   }
-  getEmployees()
-  {
-    this.employees=this.employeeservice.getEmployees()
-  }
+  // getEmployees()
+  // {
+  //   this.employees=this.employeeservice.getEmployees()
+  // }
 
 
 }
