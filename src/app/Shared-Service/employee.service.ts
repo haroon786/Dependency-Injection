@@ -6,7 +6,7 @@ import { LoggingService } from './logging.service';
   providedIn: 'root'
 })
 export class EmployeeService {
-  emoji = 'imran';
+  employeeName = '👨';
   constructor(private loggservice:LoggingService)
   {
     console.log(`instance of  emmployee---service`)
