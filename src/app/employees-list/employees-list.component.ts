@@ -12,7 +12,8 @@ import { AnimalService } from '../Shared-Service/animal/animal.service';
 export class EmployeesListComponent implements OnInit {
 
   employees:IEmployee[];
-  constructor(public employeeservice:EmployeeService,public animalservice:AnimalService)
+  employeeName:any;
+  constructor(public employeeservice:EmployeeService)
   {
     console.log("in employee list");
   }

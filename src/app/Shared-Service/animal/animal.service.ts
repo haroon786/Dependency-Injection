@@ -5,6 +5,19 @@ import { Injectable } from '@angular/core';
 })
 export class AnimalService {
 
-  animalName= '🐯';
-  constructor() { }
+  
+  employeeName= '🥀';
+  constructor() {
+    console.log(this.employeeName);
+    console.log(`in animal service constructor`)
+  }
+
+  getFlower()
+  {
+    console.log(this.employeeName);
+    console.log(`get flower in animal service`)
+    return  this.employeeName='⚾️';
+  }
+
+
 }
