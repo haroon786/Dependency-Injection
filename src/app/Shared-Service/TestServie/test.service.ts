@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
 
 export class TestService3 {
-
-      employeeName= '🐞';
-     constructor() { }
-
+  employeeName=  '🦋' ;
+  constructor()
+  {
+    console.log(`in testservice  conostructor`)
+  }
+      getFlower()
+        {
+          console.log( `testservice 3`)
+        }
 }
 
 export function xyzFactory() {
@@ -16,8 +21,10 @@ export function xyzFactory() {
   useFactory:xyzFactory
 })
 export class TestService {
-
-  employeeName= '🐝';
+  employeeName= '🐞';
   constructor() { }
-
+  getFlower()
+  {
+    console.log(`test service`)
+  }
 }

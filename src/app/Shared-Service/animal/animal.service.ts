@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { TestService } from '../TestServie/test.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
+  useFactory:TestService
 })
 export class AnimalService {
 
-  
+
   employeeName= '🥀';
   constructor() {
     console.log(this.employeeName);
@@ -16,7 +18,7 @@ export class AnimalService {
   {
     console.log(this.employeeName);
     console.log(`get flower in animal service`)
-    return  this.employeeName='⚾️';
+    //return  this.employeeName='⚾️';
   }
 
 

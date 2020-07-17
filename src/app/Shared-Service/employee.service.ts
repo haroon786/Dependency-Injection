@@ -8,16 +8,18 @@ import { AnimalService } from './animal/animal.service';
 })
 export class EmployeeService {
   employeeName = '👨';
-  constructor(private loggservice:LoggingService)
+  public static count=0;
+  constructor()
   {
-    console.log(`in employee  service constructor`)
+
+    console.log(`in employee  service constructor ${EmployeeService.count}`)
   }
 
-  getEmployees()
-  {
-    this.loggservice.log(`employees fetched successully`)
-    return EMPLOYEES;
-  }
+  // getEmployees()
+  // {
+  //   this.loggservice.log(`employees fetched successully`)
+  //   return EMPLOYEES;
+  // }
   getFlower()
   {
     console.log(`get flower in employee service`)

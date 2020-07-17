@@ -10,6 +10,6 @@ import {AnimalService} from '../app/Shared-Service/animal/animal.service';
 })
 export class AppComponent {
   title = 'Dependency-Injection';
-  constructor(public servie:EmployeeService)
+  constructor()
   {}
 }
