@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggingService } from '../Shared-Service/logging.service';
 
 @Component({
   selector: 'app-authority',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorityComponent implements OnInit {
 
-  constructor() { }
+  apivalues:any
+  constructor(private loggservice:LoggingService) { }
 
   ngOnInit(): void {
+    this.apivalues=this.loggservice.getConfigValues();
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoggingService } from '../Shared-Service/logging.service';
+import { UpdateLogService } from '../Shared-Service/updatedLogService/update-log.service';
 
 @Component({
   selector: 'app-child2',
@@ -9,11 +10,11 @@ import { LoggingService } from '../Shared-Service/logging.service';
 export class Child2Component implements OnInit {
 
   message:any;
-//  constructor(private loggservice:LoggingService) { }
+ constructor(private loggservice:UpdateLogService) { }
 
   ngOnInit(): void {
 
-  //  this.message=this.loggservice.sayHello("child2");
+   this.message=this.loggservice.sayHello("child2");
   }
 
 }

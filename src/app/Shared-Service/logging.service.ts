@@ -1,13 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
+import {UpdateLogService} from '../Shared-Service/updatedLogService/update-log.service';
+import {apiConfigValue} from '../apiConfig.value';
 console.log(`included in bundle `)
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'any'
 })
 export class LoggingService {
   messages:string[]=[];
   public static count=0;
-  constructor() {
+  constructor(@Inject(apiConfigValue) private configvalue) {
         LoggingService.count=LoggingService.count+1;
         console.log(`here in loggin service ${LoggingService.count}`)
    }
@@ -22,4 +24,9 @@ export class LoggingService {
   {
     return `Hello  ${message}`;
   }
+  getConfigValues()
+  {
+     return this.configvalue;
+  }
+
 }

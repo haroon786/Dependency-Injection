@@ -9,11 +9,13 @@ import { LoggingService } from '../Shared-Service/logging.service';
 export class Child1Component implements OnInit {
 
   message:any;
-  //constructor(private loggservice:LoggingService) { }
+  apivalues:any;
+  constructor(private loggservice:LoggingService) { }
 
   ngOnInit(): void {
 
-   // this.message=this.loggservice.sayHello("child1");
+    this.message=this.loggservice.sayHello("child1");
+    this.apivalues=this.loggservice.getConfigValues();
   }
 
 }
